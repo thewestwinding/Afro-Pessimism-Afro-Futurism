@@ -3,3 +3,5 @@ My final project for my senior undergraduate project. This is a study in afrofut
 To engage my audience with my designs, I've chosen to create a quiz of sorts. It will lead people to which narrative may engage them most, plus other information about the inspiration for the player character's particular design, and suggested readings if they'd like to learn more.
 
 I used the p5.js library to create the quiz, and HTML with a free Bootstrap theme (which I've downloaded into the "Website Templates" folder) to create the website. Find the Bootstrap theme I used here: https://blackrockdigital.github.io/startbootstrap-creative/
+
+For getting started with Bootstrap, click here: https://getbootstrap.com/docs/4.3/getting-started/introduction/
