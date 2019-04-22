@@ -1,3 +1,7 @@
+/*
+Current goal: upload illustrations
+*/
+
 function preload(){
     
 }
