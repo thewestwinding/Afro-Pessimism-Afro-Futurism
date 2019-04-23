@@ -214,8 +214,10 @@ function draw(){
     }
 
     // Displaying text
-    text(twoone,10,10,100,100);
-    text(twotwo,10,20,100,100);
-    text(twothree,10,30,100,100);
-    text(twofour,10,40,100,100);
+    textSize(32);
+    fill(0,102,153);
+    text(twoone,10,10);
+    text(twotwo,10,20);
+    text(twothree,10,30);
+    text(twofour,10,40);
 }
