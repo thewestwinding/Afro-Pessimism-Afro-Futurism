@@ -1,5 +1,5 @@
 /*
-Current goal: display sketch in website
+Current goal: display text (test with two)
 */
 
 var bangel;
@@ -8,19 +8,19 @@ var litany;
 var spring;
 
 function preload(){
-    bangel = loadImage('images/blackangel.jpg');
-    coal = loadImage('images/coal.png');
-    litany = loadImage('images/litany.png');
-    spring = loadImage('images/litany.png');
+    bangel = loadImage('MyProject/images/blackangel.jpg');
+    coal = loadImage('MyProject/images/coal.png');
+    litany = loadImage('MyProject/images/litany.png');
+    spring = loadImage('MyProject/images/spring.png');
 }
 
 function setup(){
-    createCanvas(windowWidth,1.25*4*windowHeight);
+    var canvas = createCanvas(windowWidth,1.25*4*windowHeight);
 
     // move sketch to sketch-holder
-    canvas.parent('sketch-holder');
+    canvas.parent("sketch-holder");
 
-    background(255);
+    background(0);
 }
 
 function draw(){
@@ -214,4 +214,8 @@ function draw(){
     }
 
     // Displaying text
+    text(twoone,10,10,100,100);
+    text(twotwo,10,20,100,100);
+    text(twothree,10,30,100,100);
+    text(twofour,10,40,100,100);
 }
