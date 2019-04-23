@@ -268,13 +268,12 @@ function draw() {
                 text(fifteenfive,   fifteenindent,  fifteenpushdown+(4*twofurtherdown));
                 text(fifteensix,    fifteenindent,  fifteenpushdown+(5*twofurtherdown));
                 text(fifteenseven,  fifteenindent,  fifteenpushdown+(6*twofurtherdown));
-                text(fifteeneight,  fifteenindent,  fifteenpushdown+(7*twofurtherdown));
             }
 
             // Nineteen
             {
                 var nineteenindent = windowWidth/8;
-                var nineteenpushdown = fifteenpushdown+(7*twofurtherdown) + 20;
+                var nineteenpushdown = fifteenpushdown+(6*twofurtherdown) + 20;
                 text(nineteenone,   nineteenindent, nineteenpushdown);
                 text(nineteentwo,   nineteenindent, nineteenpushdown+(1*twofurtherdown));
                 text(nineteenthree, nineteenindent, nineteenpushdown+(2*twofurtherdown));
