@@ -23,6 +23,24 @@ var scorelitany;
 var scorespring;
 var scores = [];
 
+// variables for buttons
+var buttonone;
+var buttontwo;
+var buttonthree;
+var buttonfive;
+var buttonsix;
+var buttonseven;
+var buttoneight;
+var buttonnine;
+var buttonten;
+var buttontwelve;
+var buttonthriteen;
+var buttonfourteen;
+var buttonfifteen;
+var buttonseventeen;
+var buttoneighteen;
+var buttonnineteen;
+
 function preload() {
     bangel = loadImage('images/blackangel.png');
     coal = loadImage('images/coal.png');
@@ -33,14 +51,18 @@ function preload() {
 function setup() {
     createCanvas(windowWidth,6.25*windowHeight);
     background(0);
+
+    // buttons
+    {
+        buttontwo = createButton("Select");
+        buttontwo.position(10,  windowHeight/2);
+        // buttontwo.mousePressed();
+
+
+    }
 }
 
 function draw() {
-
-// mouseover color
-var colorone = 2;
-var colortwo = 4;
-var colorthree = 6;
 
     // Text
     {
