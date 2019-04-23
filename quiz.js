@@ -1,8 +1,5 @@
 /*
 Goals:
-    - Have layout of text readable
-        Time: unknown
-        Error: not displaying past third stanza
     - Have function where people can input their scores (clicking, or another method)
         - Can figure this out on Tuesday evening if needed
         Time: 2-3 hours
@@ -137,14 +134,14 @@ function draw() {
         var ninefive = 'everything can be used';
         var ninesix = 'except what is wasteful';
         var nineseven = '(you will need to remember this';
-        var nineight = 'when you are accused of destruction).';
-        var nineten = 'Even when they are dangerous';
-        var nineeleven = 'examine the heart of those machines';
-        var ninetwelve = 'which you hate';
-        var ninethirteen = 'before you discard them';
-        var ninefourteen = 'but do not mourn their lack of power';
-        var ninefifteen = 'lest you be condemned';
-        var ninesixteen = 'to relive them.';
+        var nineeight = 'when you are accused of destruction).';
+        var ninenine = 'Even when they are dangerous';
+        var nineten = 'examine the heart of those machines';
+        var nineeleven = 'which you hate';
+        var ninetwelve = 'before you discard them';
+        var ninethirteen = 'but do not mourn their lack of power';
+        var ninefourteen = 'lest you be condemned';
+        var ninefifteen = 'to relive them.';
     }
 
     // Ten
@@ -272,7 +269,7 @@ function draw() {
 
             // Nineteen
             {
-                var nineteenindent = windowWidth/8;
+                var nineteenindent = 3*windowWidth/4;
                 var nineteenpushdown = fifteenpushdown+(6*twofurtherdown) + 20;
                 text(nineteenone,   nineteenindent, nineteenpushdown);
                 text(nineteentwo,   nineteenindent, nineteenpushdown+(1*twofurtherdown));
@@ -308,8 +305,8 @@ function draw() {
 
             // Five
             {
-                var fiveindent = windowWidth/4;
-                var fivepushdown = threepushdown+(13*twofurtherdown) + 20;
+                var fiveindent = 5*windowWidth/16;
+                var fivepushdown = threepushdown+(7*twofurtherdown) + 20;
                 text(fiveone,       fiveindent, fivepushdown);
                 text(fivetwo,       fiveindent, fivepushdown + (1*twofurtherdown));
                 text(fivethree,     fiveindent, fivepushdown + (2*twofurtherdown));
@@ -332,7 +329,7 @@ function draw() {
             // Fourteen
             {
                 var fourteenindent = windowWidth/2;
-                var fourteenpushdown = fivepushdown + (16*twofurtherdown) + 20;
+                var fourteenpushdown = threepushdown-40;
                 text(fourteenone,   fourteenindent, fourteenpushdown);
                 text(fourteentwo,   fourteenindent, fourteenpushdown+(1*twofurtherdown));
                 text(fourteenthree, fourteenindent, fourteenpushdown+(2*twofurtherdown));
@@ -360,7 +357,7 @@ function draw() {
             // One
             {
                 var onepushdown = 2.5*windowHeight;
-                text(oneone,    10, onepushdown);
+                text(oneone,    30, onepushdown);
                 text(onetwo,    10, onepushdown+(1*twofurtherdown));
                 text(onethree,  10, onepushdown+(2*twofurtherdown));
                 text(onefour,   10, onepushdown+(3*twofurtherdown));
@@ -372,7 +369,7 @@ function draw() {
             // Six
             {
                 var sixindent = windowWidth/4;
-                var sixpushdown = onepushdown+(6*twofurtherdown) + 20;
+                var sixpushdown = onepushdown+(6*twofurtherdown) + 40;
                 text(sixone,    sixindent,  sixpushdown);
                 text(sixtwo,    sixindent,  sixpushdown+(1*twofurtherdown));
                 text(sixthree,  sixindent,  sixpushdown+(2*twofurtherdown));
@@ -389,7 +386,7 @@ function draw() {
 
             // Thirteen
             {
-                var thirteenindent = 3*windowWidth/4;
+                var thirteenindent = 23*windowWidth/32;
                 var thirteenpushdown = twelvepushdown+(2*twofurtherdown) + 20;
                 text(thirteenone,   thirteenindent, thirteenpushdown);
                 text(thirteentwo,   thirteenindent, thirteenpushdown+(1*twofurtherdown));
@@ -415,7 +412,7 @@ function draw() {
             // Nine (15 lines)
             {
                 var nineindent = windowWidth/4;
-                var ninepushdown = eightpushdown+(5*twofurtherdown) + 20;
+                var ninepushdown = eightpushdown+(5*twofurtherdown) - 60;
                 text(nineone,       nineindent, ninepushdown);
                 text(ninetwo,       nineindent, ninepushdown+(1*twofurtherdown));
                 text(ninethree,     nineindent, ninepushdown+(2*twofurtherdown));
@@ -435,7 +432,7 @@ function draw() {
 
             // Ten
             {
-                var tenindent = windowWidth/2;
+                var tenindent = 15*windowWidth/32;
                 var tenpushdown = ninepushdown+(14*twofurtherdown) + 20;
                 text(tenone,    tenindent,  tenpushdown);
                 text(tentwo,    tenindent,  tenpushdown+(1*twofurtherdown));
