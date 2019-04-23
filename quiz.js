@@ -249,9 +249,12 @@ var colorthree = 6;
                     // color
                     if(((mouseX > twoupx) && (mouseX < twodownx)) && ((mouseY > twoupy) && (mouseY < twodowny))){
                         fill(colorone,colortwo,colorthree);
+                        console.log("kjhkajhsdkjahka")
                     } else {
                         fill(255);
                     }
+
+                    //console.log("hello worlds")
                     text(twoone,    10,     twopushdown);
                     text(twotwo,    10,     twopushdown+(1*twofurtherdown));
                     text(twothree,  10,     twopushdown+(2*twofurtherdown));
