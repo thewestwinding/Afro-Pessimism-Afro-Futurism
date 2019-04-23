@@ -17,9 +17,6 @@ function preload(){
 function setup(){
     var canvas = createCanvas(windowWidth,1.25*4*windowHeight);
 
-    // move sketch to sketch-holder
-    canvas.parent("sketch-holder");
-
     background(0);
 }
 
