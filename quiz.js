@@ -7,214 +7,350 @@ var coal;
 var litany;
 var spring;
 
-function preload(){
-    bangel = loadImage('MyProject/images/blackangel.jpg');
-    coal = loadImage('MyProject/images/coal.png');
-    litany = loadImage('MyProject/images/litany.png');
-    spring = loadImage('MyProject/images/spring.png');
+function preload() {
+    bangel = loadImage('images/blackangel.png');
+    coal = loadImage('images/coal.png');
+    litany = loadImage('images/litany.png');
+    spring = loadImage('images/spring.png');
 }
 
-function setup(){
-    var canvas = createCanvas(windowWidth,1.25*4*windowHeight);
-
+function setup() {
+    createCanvas(windowWidth,5*windowHeight);
     background(0);
 }
 
-function draw(){
+function draw() {
+
     // Text
+{
+    // One
     {
-        // One
-        {
-            var oneone = 'I';
-            var onetwo = 'is the total black, being spoken';
-            var onethree = 'from the earths inside.';
-            var onefour = 'There are many kinds of open';
-            var onefive = 'how a diamond comes into a knot of flame';
-            var onesix = 'how sounds comes into a word, coloured';
-            var oneseven = 'by who pays what for speaking.';
-        }
-
-        // Two
-        {
-            var twoone = 'Love is a word, another kind of open.';
-            var twotwo = 'As the diamond comes into a knot of flame';
-            var twothree = 'I am Black because I come from the earths inside';
-            var twofour = 'now take my word for jewel in the open light';
-        }
-
-        // Three
-        {
-            var threeone = 'For those of us who live at the shoreline';
-            var threetwo = 'standing upon the constant edges of decision';
-            var threethree = 'crucial and alone';
-            var threefour = 'for those of us who cannot indulge';
-            var threefive = 'the passing dreams of choice';
-            var threesix = 'who love in doorways coming and going';
-            var threeseven = 'in the hours between dawns';
-            var threeeight = 'looking inward and outward';
-            var threenine = 'at once before and after';
-            var threeten = 'seeking a now that can breed';
-            var threeeleven = 'futures';
-            var threetwelve = 'like bread in our childrens mouths';
-            var threethirteen = 'so their dreams will not reflect';
-            var threefourteen = 'the death of ours;';
-        }
-
-        // Five
-        {
-            var fiveone = 'And when the sun rises we are afraid';
-            var fivetwo = 'it might not remain';
-            var fivethree = 'when the sun sets we are afraid';
-            var fivefour = 'it might not rise in the morning';
-            var fivefive = 'when our stomachs are full we are afraid';
-            var fivesix = 'of indigestion';
-            var fiveseven = 'when our stomachs are empty we are afraid';
-            var fiveeight = 'we may never eat again';
-            var fivenine = 'when we are loved we are afraid';
-            var fiveten = 'love will vanish';
-            var fiveeleven = 'when we are alone we are afraid';
-            var fivetwelve = 'love will never return';
-            var fivethirteen = 'and when we speak we are afraid';
-            var fivefourteen = 'our words will not be heard';
-            var fivefifteen = 'nor welcomed';
-            var fivesixteen = 'but when we are silent';
-            var fiveseventeen = 'we are still afraid.';
-        }
-
-        // Six
-        {
-            var sixone = 'So it is better to speak';
-            var sixtwo = 'remembering';
-            var sixthree = 'we were never meant to survive.';
-        }
-
-        // Seven
-        {
-            var sevenone = 'Be who you are and will be';
-            var seventwo = 'learn to cherish';
-            var seventhree = 'that boisterous Black Angel that drives you';
-            var sevenfour = 'up one day and down another';
-            var sevenfive = 'protecting the place where your power rises';
-            var sevensix = 'running like hot blood';
-            var sevenseven = 'from the same source';
-            var seveneight = 'as your pain.';
-        }
-
-        // Eight
-        {
-            var eightone = 'When you are hungry';
-            var eighttwo = 'learn to eat';
-            var eightthree = 'whatever sustains you';
-            var eightfour = 'until morning';
-            var eightfive = 'but do not be misled by details';
-            var eightsix = 'simply because you live them.';
-        }
-
-        // Nine
-        {
-            var nineone = 'Do not let your head deny';
-            var ninetwo = 'your hands';
-            var ninethree = 'any memory of what passes through them';
-            var ninefour = 'nor your eyes nor your heart';
-            var ninefive = 'everything can be used';
-            var ninesix = 'except what is wasteful';
-            var nineseven = '(you will need to remember this';
-            var nineight = 'when you are accused of destruction).';
-            var nineten = 'Even when they are dangerous';
-            var nineeleven = 'examine the heart of those machines';
-            var ninetwelve = 'which you hate';
-            var ninethirteen = 'before you discard them';
-            var ninefourteen = 'but do not mourn their lack of power';
-            var ninefifteen = 'lest you be condemned';
-            var ninesixteen = 'to relive them.';
-        }
-
-        // Ten
-        {
-            var tenone = 'If you do not learn to hate';
-            var tentwo = 'you will never be lonely';
-            var tenthree = 'enough to love easily';
-            var tenfour = 'nor will you always be brave';
-            var tenfive = 'although it does not grow any easier.';
-        }
-
-        // Twelve
-        {
-            var twelveone = 'Remember our sun';
-            var twelvetwo = 'is not the most noteworthy star';
-            var twelvethree = 'only the nearest';
-        }
-
-        // Thirteen
-        {
-            var thirteenone = 'Respect whatever pain you bring back';
-            var thirteentwo = 'from your dreaming';
-            var thirteenthree = 'but do not look for new gods';
-            var thirteenfour = 'in the sea';
-            var thirteenfive = 'nor in any part of a rainbow.';
-        }
-
-        // Fourteen
-        {
-            var fourteenone = 'Each time you love';
-            var fourteentwo = 'love as deeply';
-            var fourteenthree = 'as if it were';
-            var fourteenfour = 'forever';
-            var fourteenfive = 'only nothing is';
-            var fourteensix = 'eternal.';
-        }
-
-        // Fifteen
-        {
-            var fifteenone = 'Speak proudly to your children';
-            var fifteentwo = 'where ever you may find them';
-            var fifteenthree = 'tell them';
-            var fifteenfour = 'you are the offspring of slaves';
-            var fifteenfive = 'and your mother was';
-            var fifteensix = 'a princess';
-            var fifteenseven = 'in darkness.';
-        }
-
-        // Seventeen
-        {
-            var seventeenone = 'At April and evening';
-            var seventeentwo = 'I recall how we came';
-            var seventeenthree = 'like new thunder';
-            var seventeenfour = 'beating the earth';
-            var seventeenfive = 'leaving the taste of rain and sunset';
-            var seventeensix = 'all our young hungers';
-            var seventeenseven = 'before us.';
-        }
-
-        // Eighteen
-        {
-            var eighteenone = 'Away from peaceful half-truths';
-            var eighteentwo = 'and springtime passing unsaid';
-            var eighteenthree = 'we came in the touch of fire';
-            var eighteenfour = 'came to the sun';
-            var eighteenfive = 'lay with the wild earth';
-            var eighteensix = 'until spent and knowing';
-            var eighteenseven = 'we brought forth young.';
-        }
-
-        // Nineteen
-        {
-            var nineteenone = 'Now insolent Aprils bedevil us';
-            var nineteentwo = 'earthly conceits';
-            var nineteenthree = 'reminding us';
-            var nineteenfour = 'all else is forfeit';
-            var nineteenfive = 'and only the blood-hungry children';
-            var nineteensix = 'remember';
-            var nineteenseven = 'what face we had';
-            var nineteeneight = 'what startling eyes.';
-        }
+        var oneone = 'I';
+        var onetwo = 'is the total black, being spoken';
+        var onethree = 'from the earths inside.';
+        var onefour = 'There are many kinds of open';
+        var onefive = 'how a diamond comes into a knot of flame';
+        var onesix = 'how sounds comes into a word, coloured';
+        var oneseven = 'by who pays what for speaking.';
     }
 
+    // Two
+    {
+        var twoone = 'Love is a word, another kind of open.';
+        var twotwo = 'As the diamond comes into a knot of flame';
+        var twothree = 'I am Black because I come from the earths inside';
+        var twofour = 'now take my word for jewel in the open light';
+    }
+
+    // Three
+    {
+        var threeone = 'For those of us who live at the shoreline';
+        var threetwo = 'standing upon the constant edges of decision';
+        var threethree = 'crucial and alone';
+        var threefour = 'for those of us who cannot indulge';
+        var threefive = 'the passing dreams of choice';
+        var threesix = 'who love in doorways coming and going';
+        var threeseven = 'in the hours between dawns';
+        var threeeight = 'looking inward and outward';
+        var threenine = 'at once before and after';
+        var threeten = 'seeking a now that can breed';
+        var threeeleven = 'futures';
+        var threetwelve = 'like bread in our childrens mouths';
+        var threethirteen = 'so their dreams will not reflect';
+        var threefourteen = 'the death of ours;';
+    }
+
+    // Five
+    {
+        var fiveone = 'And when the sun rises we are afraid';
+        var fivetwo = 'it might not remain';
+        var fivethree = 'when the sun sets we are afraid';
+        var fivefour = 'it might not rise in the morning';
+        var fivefive = 'when our stomachs are full we are afraid';
+        var fivesix = 'of indigestion';
+        var fiveseven = 'when our stomachs are empty we are afraid';
+        var fiveeight = 'we may never eat again';
+        var fivenine = 'when we are loved we are afraid';
+        var fiveten = 'love will vanish';
+        var fiveeleven = 'when we are alone we are afraid';
+        var fivetwelve = 'love will never return';
+        var fivethirteen = 'and when we speak we are afraid';
+        var fivefourteen = 'our words will not be heard';
+        var fivefifteen = 'nor welcomed';
+        var fivesixteen = 'but when we are silent';
+        var fiveseventeen = 'we are still afraid.';
+    }
+
+    // Six
+    {
+        var sixone = 'So it is better to speak';
+        var sixtwo = 'remembering';
+        var sixthree = 'we were never meant to survive.';
+    }
+
+    // Seven
+    {
+        var sevenone = 'Be who you are and will be';
+        var seventwo = 'learn to cherish';
+        var seventhree = 'that boisterous Black Angel that drives you';
+        var sevenfour = 'up one day and down another';
+        var sevenfive = 'protecting the place where your power rises';
+        var sevensix = 'running like hot blood';
+        var sevenseven = 'from the same source';
+        var seveneight = 'as your pain.';
+    }
+
+    // Eight
+    {
+        var eightone = 'When you are hungry';
+        var eighttwo = 'learn to eat';
+        var eightthree = 'whatever sustains you';
+        var eightfour = 'until morning';
+        var eightfive = 'but do not be misled by details';
+        var eightsix = 'simply because you live them.';
+    }
+
+    // Nine
+    {
+        var nineone = 'Do not let your head deny';
+        var ninetwo = 'your hands';
+        var ninethree = 'any memory of what passes through them';
+        var ninefour = 'nor your eyes nor your heart';
+        var ninefive = 'everything can be used';
+        var ninesix = 'except what is wasteful';
+        var nineseven = '(you will need to remember this';
+        var nineight = 'when you are accused of destruction).';
+        var nineten = 'Even when they are dangerous';
+        var nineeleven = 'examine the heart of those machines';
+        var ninetwelve = 'which you hate';
+        var ninethirteen = 'before you discard them';
+        var ninefourteen = 'but do not mourn their lack of power';
+        var ninefifteen = 'lest you be condemned';
+        var ninesixteen = 'to relive them.';
+    }
+
+    // Ten
+    {
+        var tenone = 'If you do not learn to hate';
+        var tentwo = 'you will never be lonely';
+        var tenthree = 'enough to love easily';
+        var tenfour = 'nor will you always be brave';
+        var tenfive = 'although it does not grow any easier.';
+    }
+
+    // Twelve
+    {
+        var twelveone = 'Remember our sun';
+        var twelvetwo = 'is not the most noteworthy star';
+        var twelvethree = 'only the nearest';
+    }
+
+    // Thirteen
+    {
+        var thirteenone = 'Respect whatever pain you bring back';
+        var thirteentwo = 'from your dreaming';
+        var thirteenthree = 'but do not look for new gods';
+        var thirteenfour = 'in the sea';
+        var thirteenfive = 'nor in any part of a rainbow.';
+    }
+
+    // Fourteen
+    {
+        var fourteenone = 'Each time you love';
+        var fourteentwo = 'love as deeply';
+        var fourteenthree = 'as if it were';
+        var fourteenfour = 'forever';
+        var fourteenfive = 'only nothing is';
+        var fourteensix = 'eternal.';
+    }
+
+    // Fifteen
+    {
+        var fifteenone = 'Speak proudly to your children';
+        var fifteentwo = 'where ever you may find them';
+        var fifteenthree = 'tell them';
+        var fifteenfour = 'you are the offspring of slaves';
+        var fifteenfive = 'and your mother was';
+        var fifteensix = 'a princess';
+        var fifteenseven = 'in darkness.';
+    }
+
+    // Seventeen
+    {
+        var seventeenone = 'At April and evening';
+        var seventeentwo = 'I recall how we came';
+        var seventeenthree = 'like new thunder';
+        var seventeenfour = 'beating the earth';
+        var seventeenfive = 'leaving the taste of rain and sunset';
+        var seventeensix = 'all our young hungers';
+        var seventeenseven = 'before us.';
+    }
+
+    // Eighteen
+    {
+        var eighteenone = 'Away from peaceful half-truths';
+        var eighteentwo = 'and springtime passing unsaid';
+        var eighteenthree = 'we came in the touch of fire';
+        var eighteenfour = 'came to the sun';
+        var eighteenfive = 'lay with the wild earth';
+        var eighteensix = 'until spent and knowing';
+        var eighteenseven = 'we brought forth young.';
+    }
+
+    // Nineteen
+    {
+        var nineteenone = 'Now insolent Aprils bedevil us';
+        var nineteentwo = 'earthly conceits';
+        var nineteenthree = 'reminding us';
+        var nineteenfour = 'all else is forfeit';
+        var nineteenfive = 'and only the blood-hungry children';
+        var nineteensix = 'remember';
+        var nineteenseven = 'what face we had';
+        var nineteeneight = 'what startling eyes.';
+    }
+}
+
     // Displaying text
-    textSize(32);
-    fill(0,102,153);
-    text(twoone,10,10);
-    text(twotwo,10,20);
-    text(twothree,10,30);
-    text(twofour,10,40);
+        // 1/4
+        {
+            // Two
+            {
+                textSize(20);
+                fill(255);
+                var twopushdown = 30;
+                var twofurtherdown = 20;
+                text(twoone,    10,     twopushdown);
+                text(twotwo,    10,     twopushdown+(1*twofurtherdown));
+                text(twothree,  10,     twopushdown+(2*twofurtherdown));
+                text(twofour,   10,     twopushdown+(3*twofurtherdown)); 
+            }
+
+            // Seven
+            {
+                var sevenindent = windowWidth/4;
+                var sevenpushdown = twopushdown+(3*twofurtherdown) + 20;
+                text(sevenone,      sevenindent,    sevenpushdown);
+                text(seventwo,      sevenindent,    sevenpushdown+(1*twofurtherdown));
+                text(seventhree,    sevenindent,    sevenpushdown+(2*twofurtherdown));
+                text(sevenfour,     sevenindent,    sevenpushdown+(3*twofurtherdown));
+                text(sevenfive,     sevenindent,    sevenpushdown+(4*twofurtherdown));
+                text(sevensix,      sevenindent,    sevenpushdown+(5*twofurtherdown));
+                text(sevenseven,    sevenindent,    sevenpushdown+(6*twofurtherdown));
+                text(seveneight,    sevenindent,    sevenpushdown+(7*twofurtherdown));
+            }
+
+            // Fifteen
+            {
+                var fifteenindent = windowWidth/2;
+                var fifteenpushdown = sevenpushdown+(7*twofurtherdown) + 20;
+                text(fifteenone,    fifteenindent,  fifteenpushdown);
+                text(fifteentwo,    fifteenindent,  fifteenpushdown+(1*twofurtherdown));
+                text(fifteenthree,  fifteenindent,  fifteenpushdown+(2*twofurtherdown));
+                text(fifteenfour,   fifteenindent,  fifteenpushdown+(3*twofurtherdown));
+                text(fifteenfive,   fifteenindent,  fifteenpushdown+(4*twofurtherdown));
+                text(fifteensix,    fifteenindent,  fifteenpushdown+(5*twofurtherdown));
+                text(fifteenseven,  fifteenindent,  fifteenpushdown+(6*twofurtherdown));
+                text(fifteeneight,  fifteenindent,  fifteenpushdown+(7*twofurtherdown));
+            }
+
+            // Nineteen
+            {
+                var nineteenindent = 3*windowWidth/4;
+                var nineteenpushdown = fifteenpushdown+(7*twofurtherdown) + 20;
+                text(nineteenone,   nineteenindent, nineteenpushdown);
+                text(nineteentwo,   nineteenindent, nineteenpushdown+(1*twofurtherdown));
+                text(nineteenthree, nineteenindent, nineteenpushdown+(2*twofurtherdown));
+                text(nineteenfour,  nineteenindent, nineteenpushdown+(3*twofurtherdown));
+                text(nineteenfive,  nineteenindent, nineteenpushdown+(4*twofurtherdown));
+                text(nineteensix,   nineteenindent, nineteenpushdown+(5*twofurtherdown));
+                text(nineteenseven, nineteenindent, nineteenpushdown+(6*twofurtherdown));
+                text(nineteeneight, nineteenindent, nineteenpushdown+(7*twofurtherdown));
+            }
+        }
+
+        // 2/4
+        {
+            // Three
+            {
+                var threepushdown = 1.25*windowHeight;
+                text(threeone,      10, threepushdown);
+                text(threetwo,      10, threepushdown+(1*twofurtherdown));
+                text(threethree,    10, threepushdown+(2*twofurtherdown));
+                text(threefour,     10, threepushdown+(3*twofurtherdown));
+                text(threefive,     10, threepushdown+(4*twofurtherdown));
+                text(threesix,      10, threepushdown+(5*twofurtherdown));
+                text(threeseven,    10, threepushdown+(6*twofurtherdown));
+                text(threeeight,    10, threepushdown+(7*twofurtherdown));
+                text(threenine,     10, threepushdown+(8*twofurtherdown));
+                text(threeten,      10, threepushdown+(9*twofurtherdown));
+                text(threeeleven,   10, threepushdown+(10*twofurtherdown));
+                text(threetwelve,   10, threepushdown+(11*twofurtherdown));
+                text(threethirteen, 10, threepushdown+(12*twofurtherdown));
+                text(threefourteen, 10, threepushdown+(13*twofurtherdown));
+            }
+
+            // Five
+            {
+                var fiveindent = windowWidth/4;
+                var fivepushdown = threepushdown+(13*twofurtherdown) + 20;
+                text(fiveone,       fiveindent, fivepushdown);
+                text(fivetwo,       fiveindent, fivepushdown + (1*twofurtherdown));
+                text(fivethree,     fiveindent, fivepushdown + (2*twofurtherdown));
+                text(fivefour,      fiveindent, fivepushdown + (3*twofurtherdown));
+                text(fivefive,      fiveindent, fivepushdown + (4*twofurtherdown));
+                text(fivesix,       fiveindent, fivepushdown + (5*twofurtherdown));
+                text(fiveseven,     fiveindent, fivepushdown + (6*twofurtherdown));
+                text(fiveeight,     fiveindent, fivepushdown + (7*twofurtherdown));
+                text(fivenine,      fiveindent, fivepushdown + (8*twofurtherdown));
+                text(fiveten,       fiveindent, fivepushdown + (9*twofurtherdown));
+                text(fiveeleven,    fiveindent, fivepushdown + (10*twofurtherdown));
+                text(fivetwelve,    fiveindent, fivepushdown + (11*twofurtherdown));
+                text(fivethirteen,  fiveindent, fivepushdown + (12*twofurtherdown));
+                text(fivefourteen,  fiveindent, fivepushdown + (13*twofurtherdown));
+                text(fivefifteen,   fiveindent, fivepushdown + (14*twofurtherdown));
+                text(fivesixteen,   fiveindent, fivepushdown + (15*twofurtherdown));
+                text(fiveseventeen, fiveindent, fivepushdown + (16*twofurtherdown));
+            }
+
+            // Fourteen
+            {
+                var fourteenindent = windowWidth/2;
+                var fourteenpushdown = fivepushdown + (16*twofurtherdown) + 20;
+                text(fourteenone,   fourteenindent, fourteenpushdown);
+                text(fourteentwo,   fourteenindent, fourteenpushdown+(1*twofurtherdown));
+                text(fourteenthree, fourteenindent, fourteenpushdown+(2*twofurtherdown));
+                text(fourteenfour,  fourteenindent, fourteenpushdown+(3*twofurtherdown));
+                text(fourteenfive,  fourteenindent, fourteenpushdown+(4*twofurtherdown));
+                text(fourteensix,   fourteenindent, fourteenpushdown+(5*twofurtherdown));
+            }
+
+            // Seventeen
+            {
+                var seventeenindent = 3*windowWidth/4;
+                var seventeenpushdown = fourteenpushdown+(5*twofurtherdown) + 20;
+                text(seventeenone,      seventeenindent,    seventeenpushdown);
+                text(seventeentwo,      seventeenindent,    seventeenpushdown+(1*twofurtherdown));
+                text(seventeenthree,    seventeenindent,    seventeenpushdown+(2*twofurtherdown));
+                text(seventeenfour,     seventeenindent,    seventeenpushdown+(3*twofurtherdown));
+                text(seventeenfive,     seventeenindent,    seventeenpushdown+(4*twofurtherdown));
+                text(seventeensix,      seventeenindent,    seventeenpushdown+(5*twofurtherdown));
+                text(seventeenseven,    seventeenindent,    seventeenpushdown+(6*twofurtherdown));
+            }
+        }
+
+        // 3/4
+        {
+            // One
+            // Six
+            // Twelve
+            // Thirteen
+        }
+
+        // 4/4
+        {
+            // Eight
+            // Nine
+            // Ten
+            // Eighteen
+        }
 }
