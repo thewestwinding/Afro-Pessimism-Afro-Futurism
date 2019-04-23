@@ -1,5 +1,15 @@
 /*
-Current goal: display text (test with two)
+Goals:
+    - Have layout of text readable
+        Time: unknown
+        Error: not displaying past third stanza
+    - Have function where people can input their scores (clicking, or another method)
+        - Can figure this out on Tuesday evening if needed
+        Time: 2-3 hours
+    - Have way that users can acknowledge finishing the quiz
+        Time: 1-2 hours
+    - Put images and descriptions to appear once they have finished
+        Time: 1-2 hours
 */
 
 // images variables
@@ -236,7 +246,7 @@ function draw() {
             // Seven
             {
                 var sevenindent = windowWidth/4;
-                var sevenpushdown = twopushdown+(3*twofurtherdown) + 20;
+                var sevenpushdown = twopushdown+(3*twofurtherdown) + 60;
                 text(sevenone,      sevenindent,    sevenpushdown);
                 text(seventwo,      sevenindent,    sevenpushdown+(1*twofurtherdown));
                 text(seventhree,    sevenindent,    sevenpushdown+(2*twofurtherdown));
@@ -263,7 +273,7 @@ function draw() {
 
             // Nineteen
             {
-                var nineteenindent = 3*windowWidth/4;
+                var nineteenindent = windowWidth/8;
                 var nineteenpushdown = fifteenpushdown+(7*twofurtherdown) + 20;
                 text(nineteenone,   nineteenindent, nineteenpushdown);
                 text(nineteentwo,   nineteenindent, nineteenpushdown+(1*twofurtherdown));
