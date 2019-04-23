@@ -2,10 +2,18 @@
 Current goal: display text (test with two)
 */
 
+// images variables
 var bangel;
 var coal;
 var litany;
 var spring;
+
+// variables for keeping score
+var scorebangel;
+var scorecoal;
+var scorelitany;
+var scorespring;
+var scores = [];
 
 function preload() {
     bangel = loadImage('images/blackangel.png');
@@ -15,14 +23,14 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(windowWidth,5*windowHeight);
+    createCanvas(windowWidth,6.25*windowHeight);
     background(0);
 }
 
 function draw() {
 
     // Text
-{
+        {
     // One
     {
         var oneone = 'I';
@@ -208,7 +216,7 @@ function draw() {
         var nineteenseven = 'what face we had';
         var nineteeneight = 'what startling eyes.';
     }
-}
+        }
 
     // Displaying text
         // 1/4
@@ -341,16 +349,109 @@ function draw() {
         // 3/4
         {
             // One
+            {
+                var onepushdown = 2.5*windowHeight;
+                text(oneone,    10, onepushdown);
+                text(onetwo,    10, onepushdown+(1*twofurtherdown));
+                text(onethree,  10, onepushdown+(2*twofurtherdown));
+                text(onefour,   10, onepushdown+(3*twofurtherdown));
+                text(onefive,   10, onepushdown+(4*twofurtherdown));
+                text(onesix,    10, onepushdown+(5*twofurtherdown));
+                text(oneseven,  10, onepushdown+(6*twofurtherdown));
+            }
+
             // Six
+            {
+                var sixindent = windowWidth/4;
+                var sixpushdown = onepushdown+(6*twofurtherdown) + 20;
+                text(sixone,    sixindent,  sixpushdown);
+                text(sixtwo,    sixindent,  sixpushdown+(1*twofurtherdown));
+                text(sixthree,  sixindent,  sixpushdown+(2*twofurtherdown));
+            }
+
             // Twelve
+            {
+                var twelveindent = windowWidth/2;
+                var twelvepushdown = sixpushdown+(2*twofurtherdown) + 20;
+                text(twelveone,     twelveindent,   twelvepushdown);
+                text(twelvetwo,     twelveindent,   twelvepushdown+(1*twofurtherdown));
+                text(twelvethree,   twelveindent,   twelvepushdown+(2*twofurtherdown));
+            }
+
             // Thirteen
+            {
+                var thirteenindent = 3*windowWidth/4;
+                var thirteenpushdown = twelvepushdown+(2*twofurtherdown) + 20;
+                text(thirteenone,   thirteenindent, thirteenpushdown);
+                text(thirteentwo,   thirteenindent, thirteenpushdown+(1*twofurtherdown));
+                text(thirteenthree, thirteenindent, thirteenpushdown+(2*twofurtherdown));
+                text(thirteenfour,  thirteenindent, thirteenpushdown+(3*twofurtherdown));
+                text(thirteenfive,  thirteenindent, thirteenpushdown+(4*twofurtherdown));
+            }
         }
 
         // 4/4
         {
             // Eight
-            // Nine
+            {
+                var eightpushdown = 3.75*windowHeight;
+                text(eightone,      10, eightpushdown);
+                text(eighttwo,      10, eightpushdown+(1*twofurtherdown));
+                text(eightthree,    10, eightpushdown+(2*twofurtherdown));
+                text(eightfour,     10, eightpushdown+(3*twofurtherdown));
+                text(eightfive,     10, eightpushdown+(4*twofurtherdown));
+                text(eightsix,      10, eightpushdown+(5*twofurtherdown));
+            }
+
+            // Nine (15 lines)
+            {
+                var nineindent = windowWidth/4;
+                var ninepushdown = eightpushdown+(5*twofurtherdown) + 20;
+                text(nineone,       nineindent, ninepushdown);
+                text(ninetwo,       nineindent, ninepushdown+(1*twofurtherdown));
+                text(ninethree,     nineindent, ninepushdown+(2*twofurtherdown));
+                text(ninefour,      nineindent, ninepushdown+(3*twofurtherdown));
+                text(ninefive,      nineindent, ninepushdown+(4*twofurtherdown));
+                text(ninesix,       nineindent, ninepushdown+(5*twofurtherdown));
+                text(nineseven,     nineindent, ninepushdown+(6*twofurtherdown));
+                text(nineeight,     nineindent, ninepushdown+(7*twofurtherdown));
+                text(ninenine,      nineindent, ninepushdown+(8*twofurtherdown));
+                text(nineten,       nineindent, ninepushdown+(9*twofurtherdown));
+                text(nineeleven,    nineindent, ninepushdown+(10*twofurtherdown));
+                text(ninetwelve,    nineindent, ninepushdown+(11*twofurtherdown));
+                text(ninethirteen,  nineindent, ninepushdown+(12*twofurtherdown));
+                text(ninefourteen,  nineindent, ninepushdown+(13*twofurtherdown));
+                text(ninefifteen,   nineindent, ninepushdown+(14*twofurtherdown));
+            }
+
             // Ten
+            {
+                var tenindent = windowWidth/2;
+                var tenpushdown = ninepushdown+(14*twofurtherdown) + 20;
+                text(tenone,    tenindent,  tenpushdown);
+                text(tentwo,    tenindent,  tenpushdown+(1*twofurtherdown));
+                text(tenthree,  tenindent,  tenpushdown+(2*twofurtherdown));
+                text(tenfour,   tenindent,  tenpushdown+(3*twofurtherdown));
+                text(tenfive,   tenindent,  tenpushdown+(4*twofurtherdown));
+            }
+
             // Eighteen
+            {
+                var eighteenindent = 3*windowWidth/4;
+                var eighteenpushdown = tenpushdown+(4*twofurtherdown) + 20;
+                text(eighteenone,   eighteenindent, eighteenpushdown);
+                text(eighteentwo,   eighteenindent, eighteenpushdown+(1*twofurtherdown));
+                text(eighteenthree, eighteenindent, eighteenpushdown+(2*twofurtherdown));
+                text(eighteenfour,  eighteenindent, eighteenpushdown+(3*twofurtherdown));
+                text(eighteenfive,  eighteenindent, eighteenpushdown+(4*twofurtherdown));
+                text(eighteensix,   eighteenindent, eighteenpushdown+(5*twofurtherdown));
+                text(eighteenseven, eighteenindent, eighteenpushdown+(6*twofurtherdown));
+            }
         }
-}
+
+    // Displaying result
+        /* 
+            User clicks on their piece, which adjusts the respective array, and then scores added together 
+            once they are done
+        */
+    }
