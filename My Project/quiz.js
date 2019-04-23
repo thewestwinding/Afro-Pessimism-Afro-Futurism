@@ -1,5 +1,5 @@
 /*
-Current goal: write text
+Current goal: display sketch in website
 */
 
 var bangel;
@@ -16,6 +16,10 @@ function preload(){
 
 function setup(){
     createCanvas(windowWidth,1.25*4*windowHeight);
+
+    // move sketch to sketch-holder
+    canvas.parent('sketch-holder');
+
     background(255);
 }
 
@@ -208,4 +212,6 @@ function draw(){
             var nineteeneight = 'what startling eyes.';
         }
     }
+
+    // Displaying text
 }
