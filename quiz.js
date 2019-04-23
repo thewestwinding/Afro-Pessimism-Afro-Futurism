@@ -1,5 +1,6 @@
 /*
 Goals:
+    - Boxes where color of text changes when mouseover
     - Have function where people can input their scores (clicking, or another method)
         - Can figure this out on Tuesday evening if needed
         Time: 2-3 hours
@@ -36,9 +37,14 @@ function setup() {
 
 function draw() {
 
+// mouseover color
+var colorone = 2;
+var colortwo = 4;
+var colorthree = 6;
+
     // Text
-        {
-    // One
+    {
+        // One
     {
         var oneone = 'I';
         var onetwo = 'is the total black, being spoken';
@@ -223,7 +229,7 @@ function draw() {
         var nineteenseven = 'what face we had';
         var nineteeneight = 'what startling eyes.';
     }
-        }
+    }
 
     // Displaying text
         // 1/4
@@ -231,13 +237,26 @@ function draw() {
             // Two
             {
                 textSize(20);
-                fill(255);
                 var twopushdown = 30;
                 var twofurtherdown = 20;
-                text(twoone,    10,     twopushdown);
-                text(twotwo,    10,     twopushdown+(1*twofurtherdown));
-                text(twothree,  10,     twopushdown+(2*twofurtherdown));
-                text(twofour,   10,     twopushdown+(3*twofurtherdown)); 
+
+                var twoupx = 10;
+                var twoupy = twopushdown;
+                var twodownx = sevenindent - 10;
+                var twodowny = twopushdown+(3*twofurtherdown);
+
+                push();
+                    // color
+                    if(((mouseX > twoupx) && (mouseX < twodownx)) && ((mouseY > twoupy) && (mouseY < twodowny))){
+                        fill(colorone,colortwo,colorthree);
+                    } else {
+                        fill(255);
+                    }
+                    text(twoone,    10,     twopushdown);
+                    text(twotwo,    10,     twopushdown+(1*twofurtherdown));
+                    text(twothree,  10,     twopushdown+(2*twofurtherdown));
+                    text(twofour,   10,     twopushdown+(3*twofurtherdown)); 
+                pop();
             }
 
             // Seven
@@ -252,6 +271,19 @@ function draw() {
                 text(sevensix,      sevenindent,    sevenpushdown+(5*twofurtherdown));
                 text(sevenseven,    sevenindent,    sevenpushdown+(6*twofurtherdown));
                 text(seveneight,    sevenindent,    sevenpushdown+(7*twofurtherdown));
+
+                push();
+                    // color
+                    if(((mouseX > sevenupx) && (mouseX < sevendownx)) && ((mouseY > sevenupy) && (mouseY < sevendowny))){
+                        fill(colorone,colortwo,colorthree);
+                    } else {
+                        fill(255);
+                    }
+                    var sevenupx = sevenindent;
+                    var sevenupy = sevenpushdown;
+                    var sevendownx = fifteenindent - 10;
+                    var sevendowny = sevenpushdown+(7*twofurtherdown);
+                pop();
             }
 
             // Fifteen
@@ -265,6 +297,19 @@ function draw() {
                 text(fifteenfive,   fifteenindent,  fifteenpushdown+(4*twofurtherdown));
                 text(fifteensix,    fifteenindent,  fifteenpushdown+(5*twofurtherdown));
                 text(fifteenseven,  fifteenindent,  fifteenpushdown+(6*twofurtherdown));
+
+                push();
+                    // color
+                    if(((mouseX > fifteenupx) && (mouseX < fifteendownx)) && ((mouseY > fifteenupy) && (mouseY < fifteendowny))){
+                        fill(colorone,colortwo,colorthree);
+                    } else {
+                        fill(255);
+                    }
+                    var fifteenupx = fifteenindent;
+                    var fifteenupy = fifteenpushdown;
+                    var fifteendownx = nineteenindent - 10;
+                    var fifteendowny = fifteenpushdown+(6*twofurtherdown);
+                pop();
             }
 
             // Nineteen
@@ -279,6 +324,19 @@ function draw() {
                 text(nineteensix,   nineteenindent, nineteenpushdown+(5*twofurtherdown));
                 text(nineteenseven, nineteenindent, nineteenpushdown+(6*twofurtherdown));
                 text(nineteeneight, nineteenindent, nineteenpushdown+(7*twofurtherdown));
+
+                push();
+                    // color
+                    if(((mouseX > nineteenupx) && (mouseX < nineteendownx)) && ((mouseY > nineteenupy) && (mouseY < nineteendowny))){
+                        fill(colorone,colortwo,colorthree);
+                    } else {
+                        fill(255);
+                    }
+                    var nineteenupx = nineteenindent;
+                    var nineteenupy = nineteenpushdown;
+                    var nineteendownx = windowWidth;
+                    var nineteendowny = windowHeight;
+                pop();
             }
         }
 
@@ -301,6 +359,19 @@ function draw() {
                 text(threetwelve,   10, threepushdown+(11*twofurtherdown));
                 text(threethirteen, 10, threepushdown+(12*twofurtherdown));
                 text(threefourteen, 10, threepushdown+(13*twofurtherdown));
+
+                push();
+                    // color
+                    if(((mouseX > threeupx) && (mouseX < threedownx)) && ((mouseY > threeupy) && (mouseY < threedowny))){
+                        fill(colorone,colortwo,colorthree);
+                    } else {
+                        fill(255);
+                    }
+                    var threeupx = 10;
+                    var threeupy = threepushdown;
+                    var threedownx = fiveindent - 10;
+                    var threedowny = threepushdown+(13*twofurtherdown);
+                pop();
             }
 
             // Five
@@ -324,6 +395,19 @@ function draw() {
                 text(fivefifteen,   fiveindent, fivepushdown + (14*twofurtherdown));
                 text(fivesixteen,   fiveindent, fivepushdown + (15*twofurtherdown));
                 text(fiveseventeen, fiveindent, fivepushdown + (16*twofurtherdown));
+
+                push();
+                    // color
+                    if(((mouseX > fiveupx) && (mouseX < fivedownx)) && ((mouseY > fiveupy) && (mouseY < fivedowny))){
+                        fill(colorone,colortwo,colorthree);
+                    } else {
+                        fill(255);
+                    }
+                    var fiveupx = fiveindent;
+                    var fiveupy = fivepushdown;
+                    var fivedownx = fourteenindent - 10;
+                    var fivedowny = fivepushdown + (16*twofurtherdown);
+                pop();
             }
 
             // Fourteen
@@ -336,6 +420,19 @@ function draw() {
                 text(fourteenfour,  fourteenindent, fourteenpushdown+(3*twofurtherdown));
                 text(fourteenfive,  fourteenindent, fourteenpushdown+(4*twofurtherdown));
                 text(fourteensix,   fourteenindent, fourteenpushdown+(5*twofurtherdown));
+
+                push();
+                    // color
+                    if(((mouseX > fourteenupx) && (mouseX < fourteendownx)) && ((mouseY > fourteenupy) && (mouseY < fourteendowny))){
+                        fill(colorone,colortwo,colorthree);
+                    } else {
+                        fill(255);
+                    }
+                    var fourteenupx = fourteenindent;
+                    var fourteenupy = fourteenpushdown;
+                    var fourteendownx = seventeenindent - 10;
+                    var fourteendowny = fourteenpushdown+(5*twofurtherdown);
+                pop();
             }
 
             // Seventeen
@@ -349,6 +446,19 @@ function draw() {
                 text(seventeenfive,     seventeenindent,    seventeenpushdown+(4*twofurtherdown));
                 text(seventeensix,      seventeenindent,    seventeenpushdown+(5*twofurtherdown));
                 text(seventeenseven,    seventeenindent,    seventeenpushdown+(6*twofurtherdown));
+
+                push();
+                    // color
+                    if(((mouseX > seventeenupx) && (mouseX < seventeendownx)) && ((mouseY > seventeenupy) && (mouseY < seventeendowny))){
+                        fill(colorone,colortwo,colorthree);
+                    } else {
+                        fill(255);
+                    }
+                    var seventeenupx = seventeenindent;
+                    var seventeenupy = seventeenpushdown;
+                    var seventeendownx = windowWidth;
+                    var seventeendowny = seventeenpushdown+(6*twofurtherdown);
+                pop();
             }
         }
 
@@ -364,6 +474,19 @@ function draw() {
                 text(onefive,   10, onepushdown+(4*twofurtherdown));
                 text(onesix,    10, onepushdown+(5*twofurtherdown));
                 text(oneseven,  10, onepushdown+(6*twofurtherdown));
+
+                push();
+                    // color
+                    if(((mouseX > oneupx) && (mouseX < onedownx)) && ((mouseY > oneupy) && (mouseY < onedowny))){
+                        fill(colorone,colortwo,colorthree);
+                    } else {
+                        fill(255);
+                    }
+                    var oneupx = 10;
+                    var oneupy = onepushdown;
+                    var onedownx = sixindent - 10;
+                    var onedowny = onepushdown+(6*twofurtherdown);
+                pop();
             }
 
             // Six
@@ -373,6 +496,19 @@ function draw() {
                 text(sixone,    sixindent,  sixpushdown);
                 text(sixtwo,    sixindent,  sixpushdown+(1*twofurtherdown));
                 text(sixthree,  sixindent,  sixpushdown+(2*twofurtherdown));
+
+                push();
+                    // color
+                    if(((mouseX > sixupx) && (mouseX < sixdownx)) && ((mouseY > sixupy) && (mouseY < sixdowny))){
+                        fill(colorone,colortwo,colorthree);
+                    } else {
+                        fill(255);
+                    }
+                    var sixupx = sixindent;
+                    var sixupy = sixpushdown;
+                    var sixdownx = twelveindent - 10;
+                    var sixdowny = sixpushdown+(2*twofurtherdown);
+                pop();
             }
 
             // Twelve
@@ -382,6 +518,19 @@ function draw() {
                 text(twelveone,     twelveindent,   twelvepushdown);
                 text(twelvetwo,     twelveindent,   twelvepushdown+(1*twofurtherdown));
                 text(twelvethree,   twelveindent,   twelvepushdown+(2*twofurtherdown));
+
+                push();
+                    // color
+                    if(((mouseX > twelveupx) && (mouseX < twelvedownx)) && ((mouseY > twelveupy) && (mouseY < twelvedowny))){
+                        fill(colorone,colortwo,colorthree);
+                    } else {
+                        fill(255);
+                    }
+                    var twelveupx = twelveindent;
+                    var twelveupy = twelvepushdown;
+                    var twelvedownx = thirteenindent - 10;
+                    var twelvedowny = twelvepushdown+(2*twofurtherdown);
+                pop();
             }
 
             // Thirteen
@@ -393,6 +542,19 @@ function draw() {
                 text(thirteenthree, thirteenindent, thirteenpushdown+(2*twofurtherdown));
                 text(thirteenfour,  thirteenindent, thirteenpushdown+(3*twofurtherdown));
                 text(thirteenfive,  thirteenindent, thirteenpushdown+(4*twofurtherdown));
+
+                push();
+                    // color
+                    if(((mouseX > thirteenupx) && (mouseX < thirteendownx)) && ((mouseY > thirteenupy) && (mouseY < thirteendowny))){
+                        fill(colorone,colortwo,colorthree);
+                    } else {
+                        fill(255);
+                    }
+                    var thirteenupx = thirteenindent;
+                    var thirteenupy = thirteenpushdown;
+                    var thirteendownx = windowWidth;
+                    var thirteendowny = thirteenpushdown+(4*twofurtherdown);
+                pop();
             }
         }
 
@@ -407,9 +569,22 @@ function draw() {
                 text(eightfour,     10, eightpushdown+(3*twofurtherdown));
                 text(eightfive,     10, eightpushdown+(4*twofurtherdown));
                 text(eightsix,      10, eightpushdown+(5*twofurtherdown));
+
+                push();
+                    // color
+                    if(((mouseX > eightupx) && (mouseX < eightdownx)) && ((mouseY > eightupy) && (mouseY < eightdowny))){
+                        fill(colorone,colortwo,colorthree);
+                    } else {
+                        fill(255);
+                    }
+                    var eightupx = 10;
+                    var eightupy = eightpushdown;
+                    var eightdownx = nineindent - 10;
+                    var eightdowny = eightpushdown+(5*twofurtherdown);
+                pop();
             }
 
-            // Nine (15 lines)
+            // Nine 
             {
                 var nineindent = windowWidth/4;
                 var ninepushdown = eightpushdown+(5*twofurtherdown) - 60;
@@ -428,6 +603,19 @@ function draw() {
                 text(ninethirteen,  nineindent, ninepushdown+(12*twofurtherdown));
                 text(ninefourteen,  nineindent, ninepushdown+(13*twofurtherdown));
                 text(ninefifteen,   nineindent, ninepushdown+(14*twofurtherdown));
+
+                push();
+                    // color
+                    if(((mouseX > nineupx) && (mouseX < ninedownx)) && ((mouseY > nineupy) && (mouseY < ninedowny))){
+                        fill(colorone,colortwo,colorthree);
+                    } else {
+                        fill(255);
+                    }
+                    var nineupx = nineindent;
+                    var nineupy = ninepushdown;
+                    var ninedownx = tenindent - 10;
+                    var ninedowny = ninepushdown+(14*twofurtherdown);
+                pop();
             }
 
             // Ten
@@ -439,6 +627,19 @@ function draw() {
                 text(tenthree,  tenindent,  tenpushdown+(2*twofurtherdown));
                 text(tenfour,   tenindent,  tenpushdown+(3*twofurtherdown));
                 text(tenfive,   tenindent,  tenpushdown+(4*twofurtherdown));
+
+                push();
+                    // color
+                    if(((mouseX > tenupx) && (mouseX < tendownx)) && ((mouseY > tenupy) && (mouseY < tendowny))){
+                        fill(colorone,colortwo,colorthree);
+                    } else {
+                        fill(255);
+                    }
+                    var tenupx = tenindent;
+                    var tenupy = tenpushdown;
+                    var tendownx = eighteenindent - 10;
+                    var tendowny = tenpushdown+(4*twofurtherdown);
+                pop();
             }
 
             // Eighteen
@@ -452,6 +653,19 @@ function draw() {
                 text(eighteenfive,  eighteenindent, eighteenpushdown+(4*twofurtherdown));
                 text(eighteensix,   eighteenindent, eighteenpushdown+(5*twofurtherdown));
                 text(eighteenseven, eighteenindent, eighteenpushdown+(6*twofurtherdown));
+
+                push();
+                    // color
+                    if(((mouseX > eighteenupx) && (mouseX < eighteendownx)) && ((mouseY > eighteenupy) && (mouseY < eighteendowny))){
+                        fill(colorone,colortwo,colorthree);
+                    } else {
+                        fill(255);
+                    }
+                    var eighteenupx = eighteenindent;
+                    var eighteenupy = eighteenpushdown;
+                    var eighteendownx = windowWidth;
+                    var eighteendowny = eighteenpushdown+(6*twofurtherdown);
+                pop();
             }
         }
 
