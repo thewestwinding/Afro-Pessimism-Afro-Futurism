@@ -40,6 +40,7 @@ var buttonfifteen;
 var buttonseventeen;
 var buttoneighteen;
 var buttonnineteen;
+    var twostring = "two";
 
 function preload() {
     bangel = loadImage('images/blackangel.png');
@@ -54,11 +55,17 @@ function setup() {
 
     // buttons
     {
-        buttontwo = createButton("Select");
+        buttontwo = createButton("Select","two");
         buttontwo.position(10,  windowHeight/2);
-        // buttontwo.mousePressed();
+        buttontwo.mousePressed();
 
 
+    }
+}
+
+function mousePressed() {
+    if (value === "two"){
+        // add this to array
     }
 }
 
@@ -490,3 +497,4 @@ function draw() {
             once they are done
         */
     }
+
