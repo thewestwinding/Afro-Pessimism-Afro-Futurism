@@ -14,6 +14,10 @@ var bangel;
 var coal;
 var litany;
 var spring;
+var coalimage;
+var bangelimage;
+var springimage;
+var litanyimage;
 
 // variables for keeping score
 var scorebangel;
@@ -49,6 +53,10 @@ function preload() {
     coal = loadImage('images/coal.png');
     litany = loadImage('images/litany.png');
     spring = loadImage('images/spring.png');
+    coalimage = loadImage('images/coaltext.png');
+    bangelimage = loadImage('images/bangeltext.png');
+    litanyimage = loadImage('images/litanytext.png');
+    springimage = loadImage('images/springtext.png');
 }
 
 function setup() {
@@ -146,8 +154,8 @@ function setup() {
 
 function draw() {
 
-    // Text
-    {
+// Text
+{
         // One
     {
         var oneone = 'I';
@@ -333,7 +341,7 @@ function draw() {
         var nineteenseven = 'what face we had';
         var nineteeneight = 'what startling eyes.';
     }
-    }
+}
 
     // Displaying text
         // 1/4
@@ -655,36 +663,23 @@ function displayResult(){
     if( totalscore[1] == Math.max.apply(Math, totalscore)){
         image(coal,     3*windowWidth/4,    6.5*windowHeight);
 
-        text("If you find this path, it will be one where MC (our player character) acutely feels",10,6.5*windowHeight);
-        text("the societal pressures to work, work, keep their head low, and work some more. This",10,6.5*windowHeight          +10); 
-        text("encourages them to drive themselves into isolation. Uncontent with their lonely life, they",10,6.5*windowHeight   +20);
-        text("ventures outside for the first time in months and is immediately thrown into situations",10,6.5*windowHeight      +30); 
-        text("with people who don't exactly mesh with them at first. But, as they learn to speak for",10,6.5*windowHeight       +40); 
-        text("themselves and finds expressions to put to their experiences and emotions, they find more",10,6.5*windowHeight    +50);
-        text("the reasons why they hid themselves for so long. Blaming themselves less for the pain",10,6.5*windowHeight        +60); 
-        text("they face and doing their best to build their support system, they now know well the",10,6.5*windowHeight         +70); 
-        text("possibilities that come with being able to share their thoughts with the air, and all the",10,6.5*windowHeight    +80); 
-        text("freedom that comes with it. For the player, they will unlock many skills, including being",10,6.5*windowHeight    +90); 
-        text("able to clearly communicate ideas, easier ways to deal with rejection, and increased",10,6.5*windowHeight         +100);
-        text("leadership skills.",10,6.5*windowHeight                                                                           +110);
+        image(coaltext, 0, 6.5*windowHeight);
 
     } else if( totalscore[2] == Math.max.apply(Math, totalscore)){
-        image(litany,   10,                 6.5*windowHeight);
+        image(litany,   0,                 6.5*windowHeight);
 
-        text("On this path, MC (our main character) wants to find a way out of their dreary apartment.");
-        text("But, no matter how hard they work or big of a smile they have, they recieve no support");
-        text("and no credit. Tired with the relentlessly heartbreaking risk of trying, they decide to give");
-        text("their seemingly ambitious optimism one more try. This time around, instead of trying to turn");
-        text("others' minds around, they seek out resources themselves in the places they were never taught to");
-        text("find them - neighbors, self-published writings, and small community gatherings. Finding strength");
-        text("in their difference that others didn't see in them, MC approaches life with a new-found confidence");
-        text("in their culture, qualities, and skills. They seek out more knowledge and stand up for themselves");
-        text("more, which leads them to learn more about what exactly is going on at the gate. For the player,");
-        text("skills gained along this route include ");
+        image(litanytext, windowWidth/2, 6.5*windowHeight);
 
     } else if( totalscore[3] == Math.max.apply(Math, totalscore)){
         image(bangel,   windowWidth/2,      6.5*windowHeight);
+
+        image(bangeltext, 0, 6.5*windowHeight);
+
     } else if( totalscore[4] == Math.max.apply(Math, totalscore)){
         image(spring,   windowWidth/2,      6.5*windowHeight);
+
+        image(springtext, 0, 6.5*windowHeight);
+
+        
     }
 }
