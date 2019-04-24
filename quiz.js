@@ -47,6 +47,7 @@ var buttonfifteen;
 var buttonseventeen;
 var buttoneighteen;
 var buttonnineteen;
+var finishbutton;
 
 function preload() {
     bangel = loadImage('images/blackangel.png');
@@ -487,6 +488,7 @@ function setup() {
     var litanyscore = 1.092;
     var bangelscore = 1.274;
     var springscore = 1.176;
+    totalscore = [0,0,0,0];
 
     // buttons
     {
@@ -566,118 +568,37 @@ function setup() {
             buttoneighteen.mousePressed(scoregroupfour = [0*coalscore, litanyscore,    bangelscore,    springscore]);
         }
 
-        var finishbutton = createButton("Click when finished");
-        finishbutton.position((windowWidth/2) - 250, 6.25*windowHeight)
+        finishbutton = createButton("Click when finished");
+        finishbutton.position((windowWidth/2) - 250, 6.25*windowHeight + 30);
         finishbutton.mousePressed(displayResult);
     }
 }
 
 function draw() {
     // Displaying result
-        {
-            var totalscore = scoregroupone + scoregrouptwo + scoregroupthree + scoregroupfour;
-        }
+    for(var i = 0; i < 4; i++){
+        totalscore[i] = scoregroupone[i] + scoregrouptwo[i] + scoregroupthree[i] + scoregroupfour[i];
+    }
+    console.log(totalscore);
+    // console.log(Math.max.apply(Math, totalscore));
 }
-
-/* // Functions for score additions
-{
-    // First group
-    {
-        function scoreTwo() {
-            scoregroupone = [coalscore, litanyscore,    bangelscore,    springscore];
-        }
-
-        function scoreSeven() {
-            scoregroupone = [coalscore, litanyscore,    bangelscore,    springscore];
-        }
-
-        function scoreFifteen() {
-            scoregroupone = [coalscore, litanyscore,    bangelscore,    springscore];
-        }
-
-        function scoreNineteen() {
-            scoregroupone = [coalscore, 0*litanyscore,    0*bangelscore,    springscore];
-        }
-    }
-
-    // Second group
-    {
-        function scoreThree() {
-            scoregrouptwo = [0*coalscore, litanyscore,    bangelscore,    0*springscore];
-        }
-
-        function scoreFive() {
-            scoregrouptwo = [0*coalscore, litanyscore,    0*bangelscore,    springscore];
-        }
-
-        function scoreFourteen() {
-            scoregrouptwo = [0*coalscore, litanyscore,    bangelscore,    0*springscore];
-        }
-
-        function scoreSeventeen() {
-            scoregrouptwo = [0*coalscore, litanyscore,    0*bangelscore,    springscore];
-        }
-    }
-
-    // Third group
-    {
-        function scoreOne() {
-            scoregroupthree = [coalscore, litanyscore,    0*bangelscore,    springscore];
-        }
-
-        function scoreSix() {
-            scoregroupthree = [0*coalscore, litanyscore,    bangelscore,    springscore];
-        }
-
-        function scoreTwelve() {
-            scoregroupthree = [coalscore, 0*litanyscore,    bangelscore,    springscore];
-        }
-
-        function scoreThirteen() {
-            scoregroupthree = [0*coalscore, litanyscore,    bangelscore,    springscore];
-        }
-    }
-
-    // Fourth group
-    {
-        function scoreEight() {
-            scoregroupfour = [0*coalscore, litanyscore,    bangelscore,    springscore];
-        }
-
-        function scoreNine() {
-            scoregroupfour = [0*coalscore, litanyscore,    bangelscore,    springscore];
-        }
-
-        function scoreTen() {
-            scoregroupfour = [coalscore, litanyscore,    bangelscore,    0*springscore];
-        }
-
-        function scoreEighteen() {
-            scoregroupfour = [0*coalscore, litanyscore,    bangelscore,    springscore];
-        }
-    }
-} */
 
 function displayResult(){
     if( totalscore[1] === Math.max.apply(Math, totalscore)){
-        image(coal,     3*windowWidth/4,    6.5*windowHeight);
-
-        image(coaltext, 0, 6.5*windowHeight);
+        image(coal,     3*windowWidth/4,    6.5*windowHeight, 500, 796);
+        image(coalimage, 0, 6.5*windowHeight,700,700);
 
     } else if( totalscore[2] === Math.max.apply(Math, totalscore)){
-        image(litany,   0,                 6.5*windowHeight);
-
-        image(litanytext, windowWidth/2, 6.5*windowHeight);
+        image(litany,0, 6.5*windowHeight, 500,923);
+        image(litanyimage, windowWidth/2, 6.5*windowHeight,700,700);
 
     } else if( totalscore[3] === Math.max.apply(Math, totalscore)){
-        image(bangel,   windowWidth/2,      6.5*windowHeight);
-
-        image(bangeltext, 0, 6.5*windowHeight);
+        image(bangel,   windowWidth/2,      6.5*windowHeight,612,500);
+        image(bangelimage, 0, 6.5*windowHeight,600,600);
 
     } else if( totalscore[4] === Math.max.apply(Math, totalscore)){
-        image(spring,   windowWidth/2,      6.5*windowHeight);
-
-        image(springtext, 0, 6.5*windowHeight);
+        image(spring,   windowWidth/2,      6.5*windowHeight,554,500);
+        image(springimage, 0, 6.5*windowHeight,600,600);
 
         
     }
