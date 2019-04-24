@@ -576,14 +576,17 @@ function setup() {
 
 function draw() {
     // Displaying result
-    for(var i = 0; i < 4; i++){
-        totalscore[i] = scoregroupone[i] + scoregrouptwo[i] + scoregroupthree[i] + scoregroupfour[i];
-    }
-    console.log(totalscore);
+    
+    // console.log(totalscore);
     // console.log(Math.max.apply(Math, totalscore));
+    // console.log(totalscore[1] === Math.max.apply(Math, totalscore));
 }
 
 function displayResult(){
+    for(var i = 0; i < 4; i++){
+        totalscore[i] = scoregroupone[i] + scoregrouptwo[i] + scoregroupthree[i] + scoregroupfour[i];
+    }
+    
     if( totalscore[1] === Math.max.apply(Math, totalscore)){
         image(coal,     3*windowWidth/4,    6.5*windowHeight, 500, 796);
         image(coalimage, 0, 6.5*windowHeight,700,700);
