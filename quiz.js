@@ -1,6 +1,5 @@
 /*
 Goals:
-    - Boxes where color of text changes when mouseover
     - Have function where people can input their scores (clicking, or another method)
         - Can figure this out on Tuesday evening if needed
         Time: 2-3 hours
@@ -21,7 +20,10 @@ var scorebangel;
 var scorecoal;
 var scorelitany;
 var scorespring;
-var scores = [];
+var scoregroupone = [];
+var scoregrouptwo = [];
+var scoregroupthree = [];
+var scoregroupfour = [];
 
 // variables for buttons
 var buttonone;
@@ -40,7 +42,6 @@ var buttonfifteen;
 var buttonseventeen;
 var buttoneighteen;
 var buttonnineteen;
-    var twostring = "two";
 
 function preload() {
     bangel = loadImage('images/blackangel.png');
@@ -53,19 +54,88 @@ function setup() {
     createCanvas(windowWidth,6.25*windowHeight);
     background(0);
 
+    var coalscore = 2.184;
+    var litanyscore = 1.092;
+    var bangelscore = 1.274;
+    var springscore = 1.176;
+
     // buttons
     {
-        buttontwo = createButton("Select","two");
-        buttontwo.position(10,  windowHeight/2);
-        buttontwo.mousePressed();
+        // group one
+        {
+            buttontwo = createButton("Love is a word");
+            buttontwo.position(10,  2*windowHeight);
+            buttontwo.mousePressed(scoreTwo);
 
+            buttonseven = createButton("Be who you are and will be");
+            buttonseven.position(10, 2*windowHeight + 30);
+            buttonseven.mousePressed(scoreSeven);
 
-    }
-}
+            buttonfifteen = createButton("Speak proudly to your children");
+            buttonfifteen.position(10, 2*windowHeight + 60);
+            buttonfifteen.mousePressed(scoreFifteen);
 
-function mousePressed() {
-    if (value === "two"){
-        // add this to array
+            buttonnineteen = createButton("Now insolent Aprils bedevil us")
+            buttonnineteen.position(10, 2*windowHeight + 90);
+            buttonnineteen.mousePressed(scoreNineteen);
+        }
+
+        // group two
+        {
+            buttonthree = createButton("For those of use wo live at the shoreline");
+            buttonthree.position(10, 3.4*windowHeight);
+            buttonthree.mousePressed(scoreThree);
+
+            buttonfive = createButton("And when the sun rises we are afraid");
+            buttonfive.position(10, 3.4*windowHeight + 30);
+            buttonfive.mousePressed(scoreFive);
+
+            buttonfourteen = createButton("Each time you love");
+            buttonfourteen.position(10, 3.4*windowHeight + 60);
+            buttonfourteen.mousePressed(scoreFourteen);
+
+            buttonseventeen = createButton("At April and evening");
+            buttonseventeen.position(10, 3.4*windowHeight + 90);
+            buttonseventeen.mousePressed(scoreSeventeen);
+        }
+
+        // group three
+        {
+            buttonone = createButton("I/is the total black");
+            buttonone.position(3*windowWidth/4, 4*windowHeight);
+            buttonone.mousePressed(scoreOne);
+
+            buttonsix = createButton("So it is better to speak");
+            buttonsix.position(3*windowWidth/4, 4*windowHeight + 30);
+            buttonsix.mousePressed(scoreSix);
+
+            buttontwelve = createButton("Remember our sun");
+            buttontwelve.position(3*windowWidth/4, 4*windowHeight + 60);
+            buttontwelve.mousePressed(scoreTwelve);
+            
+            buttonthirteen = createButton("Respect whatever pain you bring back");
+            buttonthirteen.position(3*windowWidth/4, 4*windowHeight + 90);
+            buttonthirteen.mousePressed(scoreThirteen);
+        }
+
+        // group four
+        {
+            buttoneight = createButton("When you are hungry");
+            buttoneight.position(10, 5.7*windowHeight);
+            buttoneight.mousePressed(scoreEight);
+
+            buttonnine = createButton("Do not let your head deny");
+            buttonnine.position(10, 5.7*windowHeight + 30);
+            buttonnine.mousePressed(scoreNine);
+
+            buttonten = createButton("If you do not learn to hate");
+            buttonten.position(10, 5.7*windowHeight + 60);
+            buttonten.mousePressed(scoreTen);
+
+            buttoneighteen = createButton("Away from peaceful half-truths");
+            buttoneighteen.position(10, 5.7*windowHeight + 90);
+            buttoneighteen.mousePressed(scoreEighteen);
+        }
     }
 }
 
@@ -496,5 +566,83 @@ function draw() {
             User clicks on their piece, which adjusts the respective array, and then scores added together 
             once they are done
         */
+}
+
+// Functions for score additions
+{
+    // First group
+    {
+        function scoreTwo() {
+            scoregroupone = [coalscore, litanyscore,    bangelscore,    springscore];
+        }
+
+        function scoreSeven() {
+            scoregroupone = [coalscore, litanyscore,    bangelscore,    springscore];
+        }
+
+        function scoreFifteen() {
+            scoregroupone = [coalscore, litanyscore,    bangelscore,    springscore];
+        }
+
+        function scoreNineteen() {
+            scoregroupone = [coalscore, 0*litanyscore,    0*bangelscore,    springscore];
+        }
     }
 
+    // Second group
+    {
+        function scoreThree() {
+            scoregrouptwo = [0*coalscore, litanyscore,    bangelscore,    0*springscore];
+        }
+
+        function scoreFive() {
+            scoregrouptwo = [0*coalscore, litanyscore,    0*bangelscore,    springscore];
+        }
+
+        function scoreFourteen() {
+            scoregrouptwo = [0*coalscore, litanyscore,    bangelscore,    0*springscore];
+        }
+
+        function scoreSeventeen() {
+            scoregrouptwo = [0*coalscore, litanyscore,    0*bangelscore,    springscore];
+        }
+    }
+
+    // Third group
+    {
+        function scoreOne() {
+            scoregroupthree = [coalscore, litanyscore,    0*bangelscore,    springscore];
+        }
+
+        function scoreSix() {
+            scoregroupthree = [0*coalscore, litanyscore,    bangelscore,    springscore];
+        }
+
+        function scoreTwelve() {
+            scoregroupthree = [coalscore, 0*litanyscore,    bangelscore,    springscore];
+        }
+
+        function scoreThirteen() {
+            scoregroupthree = [0*coalscore, litanyscore,    bangelscore,    springscore];
+        }
+    }
+
+    // Fourth group
+    {
+        function scoreEight() {
+            scoregroupfour = [0*coalscore, litanyscore,    bangelscore,    springscore];
+        }
+
+        function scoreNine() {
+            scoregroupfour = [0*coalscore, litanyscore,    bangelscore,    springscore];
+        }
+
+        function scoreTen() {
+            scoregroupfour = [coalscore, litanyscore,    bangelscore,    0*springscore];
+        }
+
+        function scoreEighteen() {
+            scoregroupfour = [0*coalscore, litanyscore,    bangelscore,    springscore];
+        }
+    }
+}
