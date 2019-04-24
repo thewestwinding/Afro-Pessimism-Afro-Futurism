@@ -486,7 +486,7 @@ function setup() {
 
     var coalscore = 2.184;
     var litanyscore = 1.092;
-    var bangelscore = 1.274;
+    var bangelscore = 1.074;
     var springscore = 1.176;
     totalscore = [0,0,0,0];
 
@@ -568,40 +568,33 @@ function setup() {
             buttoneighteen.mousePressed(scoregroupfour = [0*coalscore, litanyscore,    bangelscore,    springscore]);
         }
 
-        finishbutton = createButton("Click when finished");
-        finishbutton.position((windowWidth/2) - 250, 6.25*windowHeight + 30);
+        finishbutton = createButton("Click when finished, then scroll down for your result");
+        finishbutton.position((windowWidth/2) - 500, 6.25*windowHeight + 30);
         finishbutton.mousePressed(displayResult);
     }
-}
-
-function draw() {
-    // Displaying result
-    
-    // console.log(totalscore);
-    // console.log(Math.max.apply(Math, totalscore));
-    // console.log(totalscore[1] === Math.max.apply(Math, totalscore));
 }
 
 function displayResult(){
     for(var i = 0; i < 4; i++){
         totalscore[i] = scoregroupone[i] + scoregrouptwo[i] + scoregroupthree[i] + scoregroupfour[i];
     }
+    console.log(totalscore);
     
     if( totalscore[1] === Math.max.apply(Math, totalscore)){
-        image(coal,     3*windowWidth/4,    6.5*windowHeight, 500, 796);
-        image(coalimage, 0, 6.5*windowHeight,700,700);
+        image(coal,     3*windowWidth/4,    5*windowHeight, 500, 796);
+        image(coalimage, 0, 5*windowHeight,700,700);
 
     } else if( totalscore[2] === Math.max.apply(Math, totalscore)){
-        image(litany,0, 6.5*windowHeight, 500,923);
-        image(litanyimage, windowWidth/2, 6.5*windowHeight,700,700);
+        image(litany,0, 5*windowHeight, 500,923);
+        image(litanyimage, windowWidth/2, 5*windowHeight,700,700);
 
     } else if( totalscore[3] === Math.max.apply(Math, totalscore)){
-        image(bangel,   windowWidth/2,      6.5*windowHeight,612,500);
-        image(bangelimage, 0, 6.5*windowHeight,600,600);
+        image(bangel,   windowWidth/2,      5*windowHeight,612,500);
+        image(bangelimage, 0, 5*windowHeight,600,600);
 
     } else if( totalscore[4] === Math.max.apply(Math, totalscore)){
-        image(spring,   windowWidth/2,      6.5*windowHeight,554,500);
-        image(springimage, 0, 6.5*windowHeight,600,600);
+        image(spring,   windowWidth/2,      5*windowHeight,554,500);
+        image(springimage, 0, 5*windowHeight,600,600);
 
         
     }
