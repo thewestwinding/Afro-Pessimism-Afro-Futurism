@@ -489,17 +489,17 @@ function setup() {
         // group one
         {
             labelone = createA("https://thewestwinding.github.io/Afro-Pessimism-Afro-Futurism/","Which intrigues you most?");
-            labelone.position(10, 3*windowHeight);
+            labelone.position(10, twopushdown+(3*twofurtherdown)+40);
             inputone = createInput();
-            inputone.position(10, 3*windowHeight + 30);
+            inputone.position(10, twopushdown+(3*twofurtherdown) + 70);
         }
 
         // group two
         {
             labeltwo = createA("https://thewestwinding.github.io/Afro-Pessimism-Afro-Futurism/","Which intrigues you most?");
-            labeltwo.position(10, 4.6*windowHeight);
+            labeltwo.position(10, threepushdown+(13*twofurtherdown)+40);
             inputtwo = createInput();
-            inputtwo.position(10, 4.6*windowHeight + 30);
+            inputtwo.position(10, threepushdown+(13*twofurtherdown) + 70);
         }
 
         // group three
