@@ -505,9 +505,9 @@ function setup() {
         // group three
         {
             labelthree = createA("https://thewestwinding.github.io/Afro-Pessimism-Afro-Futurism/","Which intrigues you most?");
-            labelthree.position(3*windowWidth/4, 5.5*windowHeight);
+            labelthree.position(3*windowWidth/4, 5.4*windowHeight);
             inputthree = createInput();
-            inputthree.position(3*windowWidth/4, 5.5*windowHeight + 30);
+            inputthree.position(3*windowWidth/4, 5.4*windowHeight + 30);
         }
 
         // group four
