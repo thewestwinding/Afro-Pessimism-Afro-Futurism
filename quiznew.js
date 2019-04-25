@@ -489,41 +489,41 @@ function setup() {
         // group one
         {
             labelone = createA("https://thewestwinding.github.io/Afro-Pessimism-Afro-Futurism/","Which intrigues you most?");
-            labelone.position(10, 2*windowHeight);
+            labelone.position(10, 3*windowHeight);
             inputone = createInput();
-            inputone.position(10, 2*windowHeight + 30);
+            inputone.position(10, 3*windowHeight + 30);
         }
 
         // group two
         {
             labeltwo = createA("https://thewestwinding.github.io/Afro-Pessimism-Afro-Futurism/","Which intrigues you most?");
-            labeltwo.position(10, 3.4*windowHeight);
+            labeltwo.position(10, 4.6*windowHeight);
             inputtwo = createInput();
-            inputtwo.position(10, 3.4*windowHeight + 30);
+            inputtwo.position(10, 4.6*windowHeight + 30);
         }
 
         // group three
         {
             labelthree = createA("https://thewestwinding.github.io/Afro-Pessimism-Afro-Futurism/","Which intrigues you most?");
-            labelthree.position(3*windowWidth/4, 4*windowHeight);
+            labelthree.position(3*windowWidth/4, 5.5*windowHeight);
             inputthree = createInput();
-            inputthree.position(3*windowWidth/4, 4*windowHeight + 30);
+            inputthree.position(3*windowWidth/4, 5.5*windowHeight + 30);
         }
 
         // group four
         {
             labelfour = createA("https://thewestwinding.github.io/Afro-Pessimism-Afro-Futurism/","Which intrigues you most?");
-            labelfour.position(10, 5.7*windowHeight);
+            labelfour.position(10, 7*windowHeight);
             inputfour = createInput();
-            inputfour.position(10, 5.7*windowHeight + 30);
+            inputfour.position(10, 7*windowHeight + 30);
         }
 
         // confirm group
         {
             labelconfirm = createA("https://thewestwinding.github.io/Afro-Pessimism-Afro-Futurism/","Type 'Yes' without quotation marks and press Enter to see your answer! Refresh to take the test again.");
-            labelconfirm.position((windowWidth/2) - 500, 6.25*windowHeight + 30);
+            labelconfirm.position(10, 7.2*windowHeight + 30);
             inputconfirm = createInput();
-            inputconfirm.position((windowWidth/2) - 500, 6.25*windowHeight + 60);
+            inputconfirm.position(10, 7.2*windowHeight + 60);
         }
     }
 }
@@ -597,22 +597,24 @@ function keyPressed() {
                 totalscore[i] = scoregroupone[i] + scoregrouptwo[i] + scoregroupthree[i] + scoregroupfour[i];
             }
 
+            var resultshowpushdown = 4.6*windowHeight;
+
             // show result
             if( totalscore[0] === Math.max.apply(Math, totalscore)){
-                image(coalimage, 0, 5*windowHeight,700,700);
-                image(coal,     9*windowWidth/16,    5*windowHeight, 500, 796);
+                image(coalimage, 0, resultshowpushdown,700,700);
+                image(coal,     9*windowWidth/16,    resultshowpushdown, 500, 796);
         
             } else if( totalscore[1] === Math.max.apply(Math, totalscore)){
-                image(litanyimage, windowWidth/2 - 100, 5*windowHeight,700,700);
-                image(litany,0, 5*windowHeight, 500,923);
+                image(litanyimage, windowWidth/2 - 100, resultshowpushdown,700,700);
+                image(litany,0, resultshowpushdown, 500,923);
         
             } else if( totalscore[2] === Math.max.apply(Math, totalscore)){
-                image(bangelimage, 0, 5*windowHeight,600,600);
-                image(bangel,   windowWidth/2,      5*windowHeight,612,500);
+                image(bangelimage, 0, resultshowpushdown,600,600);
+                image(bangel,   windowWidth/2,     resultshowpushdown,612,500);
         
             } else if( totalscore[3] === Math.max.apply(Math, totalscore)){
-                image(springimage, 0, 5*windowHeight,600,600);
-                image(spring,   windowWidth/2,      5*windowHeight,554,500);
+                image(springimage, 0, resultshowpushdown,600,600);
+                image(spring,   windowWidth/2,      resultshowpushdown,554,500);
         
             }
         }
