@@ -30,24 +30,24 @@ var scoregroupthree = [];
 var scoregroupfour = [];
 var totalscore = [];
 
-// variables for buttons
-var buttonone;
-var buttontwo;
-var buttonthree;
-var buttonfive;
-var buttonsix;
-var buttonseven;
-var buttoneight;
-var buttonnine;
-var buttonten;
-var buttontwelve;
-var buttonthriteen;
-var buttonfourteen;
-var buttonfifteen;
-var buttonseventeen;
-var buttoneighteen;
-var buttonnineteen;
-var finishbutton;
+// variables for quiz inputs
+var labelone;
+var labeltwo;
+var labelthree;
+var labelfour;
+var labelconfirm;
+var inputone;
+var inputtwo;
+var inputthree;
+var inputfour;
+var inputconfirm;
+
+// variables for responses
+var responseone;
+var responsetwo;
+var responsethree;
+var responsefour;
+var responseconfirm;
 
 function preload() {
     bangel = loadImage('images/blackangel.png');
@@ -491,34 +491,130 @@ function setup() {
     totalscore = [0,0,0,0];
 
     // insert answers
+    {
+        // group one
+        {
+            labelone = createP("Which intrigues you most?");
+            labelone.position(10, 2*windowHeight);
+            inputone = createInput();
+            inputone.position(10, 2*windowHeight + 30);
+        }
+
+        // group two
+        {
+            labeltwo = createP("Which intrigues you most?");
+            labeltwo.position(10, 3.4*windowHeight);
+            inputtwo = createInput();
+            inputtwo.position(10, 3.4*windowHeight + 30);
+        }
+
+        // group three
+        {
+            labelthree = createP("Which intrigues you most?");
+            labelthree.position(3*windowWidth/4, 4*windowHeight);
+            inputthree = createInput();
+            inputthree.position(3*windowWidth/4, 4*windowHeight + 30);
+        }
+
+        // group four
+        {
+            labelfour = createP("Which intrigues you most?");
+            labelfour.position(10, 5.7*windowHeight);
+            inputfour = createInput();
+            inputfour.position(10, 5.7*windowHeight + 30);
+        }
+
+        // confirm group
+        {
+            labelconfirm = createP("Type 'Yes' without quotation marks to see your answer! Refresh to take the test again.");
+            labelconfirm.position((windowWidth/2) - 500, 6.25*windowHeight + 30);
+            inputconfirm = createInput();
+            inputconfirm.position((windowWidth/2) - 500, 6.25*windowHeight + 60);
+        }
+    }
 }
 
 function draw() {
     // console.log(totalscore);
 }
 
-function displayResult(){
-    for(var i = 0; i < 4; i++){
-        totalscore[i] = scoregroupone[i] + scoregrouptwo[i] + scoregroupthree[i] + scoregroupfour[i];
-    }
-    console.log(totalscore);
-    
-    if( totalscore[1] === Math.max.apply(Math, totalscore)){
-        image(coal,     3*windowWidth/4,    5*windowHeight, 500, 796);
-        image(coalimage, 0, 5*windowHeight,700,700);
+function keyPressed() {
+    responseone = inputone.value();
+    responsetwo = inputtwo.value();
+    responsethree = inputthree.value();
+    responsefour = inputfour.value();
+    responseconfirm = inputconfirm.value();
 
-    } else if( totalscore[2] === Math.max.apply(Math, totalscore)){
-        image(litany,0, 5*windowHeight, 500,923);
-        image(litanyimage, windowWidth/2, 5*windowHeight,700,700);
+    if (keyCode === ENTER){
+        // response one
+        if (responseone == "Love" || repsonseone == "love"){
+            scoregroupone = [coalscore, litanyscore,    bangelscore,    springscore];
+        } else if (responseone == "Be" || responseone == "be"){
+            scoregroupone = [coalscore, litanyscore,    bangelscore,    springscore];
+        } else if (responseone == "Speak" || responseone == "speak"){
+            scoregroupone = [coalscore, litanyscore,    bangelscore,    springscore];
+        } else if (responseone == "Now" || responseone == "now"){
+            scoregroupone = [coalscore, 0,    0,    springscore];
+        }
 
-    } else if( totalscore[3] === Math.max.apply(Math, totalscore)){
-        image(bangel,   windowWidth/2,      5*windowHeight,612,500);
-        image(bangelimage, 0, 5*windowHeight,600,600);
+        // response two
+        if (responsetwo == "For" || responsetwo == "for"){
+            scoregrouptwo = [0*coalscore, litanyscore,    bangelscore,    0*springscore];
+        } else if (responsetwo == "And" || responsetwo == "and"){
+            scoregrouptwo = [0, litanyscore,    0,    springscore];
+        } else if (responsetwo = "Each" || responsetwo == "each"){
+            scoregrouptwo = [0, litanyscore,    bangelscore,    0];
+        } else if (responsetwo == "At" || responsetwo == "at"){
+            scoregrouptwo = [0*coalscore, litanyscore,    0*bangelscore,    springscore];
+        }
 
-    } else if( totalscore[4] === Math.max.apply(Math, totalscore)){
-        image(spring,   windowWidth/2,      5*windowHeight,554,500);
-        image(springimage, 0, 5*windowHeight,600,600);
+        // response three
+        if (responsethree == "I" || responsethree == "i"){
+            scoregroupthree = [coalscore, litanyscore,    0*bangelscore,    springscore];
+        } else if (responsethree == "So" || responsethree == "so"){
+            scoregroupthree = [0*coalscore, litanyscore,    bangelscore,    springscore];
+        } else if (responsethree == "Remember" || responsethree == "remember"){
+            scoregroupthree = [coalscore, 0*litanyscore,    bangelscore,    springscore];
+        } else if (responsethree == "Respect" || responsethree == "respect"){
+            scoregroupthree = [0*coalscore, litanyscore,    bangelscore,    springscore];
+        }
 
+        // response four
+        if (responsefour == "When" || responsefour == "when"){
+            scoregroupfour = [0*coalscore, litanyscore,    bangelscore,    springscore];
+        } else if (responsefour == "Do" || responsefour == "do"){
+            scoregroupfour = [0*coalscore, litanyscore,    bangelscore,    springscore];
+        } else if (responsefour == "If" || responsefour == "if"){
+            scoregroupfour = [coalscore, litanyscore,    bangelscore,    0*springscore];
+        } else if (responsefour == "Away" || responsefour == "away"){
+            scoregroupfour = [0*coalscore, litanyscore,    bangelscore,    springscore];
+        }
+
+        // confirm group
+        if (responseconfirm === "Yes" || responseconfirm === "yes"){
+            // get total score
+            for(var i = 0; i < 4; i++){
+                totalscore[i] = scoregroupone[i] + scoregrouptwo[i] + scoregroupthree[i] + scoregroupfour[i];
+            }
+
+            // show result
+            if( totalscore[1] === Math.max.apply(Math, totalscore)){
+                image(coal,     3*windowWidth/4,    5*windowHeight, 500, 796);
+                image(coalimage, 0, 5*windowHeight,700,700);
         
+            } else if( totalscore[2] === Math.max.apply(Math, totalscore)){
+                image(litany,0, 5*windowHeight, 500,923);
+                image(litanyimage, windowWidth/2, 5*windowHeight,700,700);
+        
+            } else if( totalscore[3] === Math.max.apply(Math, totalscore)){
+                image(bangel,   windowWidth/2,      5*windowHeight,612,500);
+                image(bangelimage, 0, 5*windowHeight,600,600);
+        
+            } else if( totalscore[4] === Math.max.apply(Math, totalscore)){
+                image(spring,   windowWidth/2,      5*windowHeight,554,500);
+                image(springimage, 0, 5*windowHeight,600,600);
+        
+            }
+        }
     }
 }

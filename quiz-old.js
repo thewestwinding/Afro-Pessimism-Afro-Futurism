@@ -582,7 +582,7 @@ function displayResult(){
     for(var i = 0; i < 4; i++){
         totalscore[i] = scoregroupone[i] + scoregrouptwo[i] + scoregroupthree[i] + scoregroupfour[i];
     }
-    console.log(totalscore);
+    // console.log(totalscore);
     
     if( totalscore[1] === Math.max.apply(Math, totalscore)){
         image(coal,     3*windowWidth/4,    5*windowHeight, 500, 796);
