@@ -574,6 +574,10 @@ function setup() {
     }
 }
 
+function draw() {
+    // console.log(totalscore);
+}
+
 function displayResult(){
     for(var i = 0; i < 4; i++){
         totalscore[i] = scoregroupone[i] + scoregrouptwo[i] + scoregroupthree[i] + scoregroupfour[i];
