@@ -484,17 +484,11 @@ function setup() {
         }
     }
 
-    var coalscore = 2.184;
-    var litanyscore = 1.092;
-    var bangelscore = 1.074;
-    var springscore = 1.176;
-    totalscore = [0,0,0,0];
-
     // insert answers
     {
         // group one
         {
-            labelone = createP("Which intrigues you most?");
+            labelone = createA("https://thewestwinding.github.io/Afro-Pessimism-Afro-Futurism/","Which intrigues you most?");
             labelone.position(10, 2*windowHeight);
             inputone = createInput();
             inputone.position(10, 2*windowHeight + 30);
@@ -502,7 +496,7 @@ function setup() {
 
         // group two
         {
-            labeltwo = createP("Which intrigues you most?");
+            labeltwo = createA("https://thewestwinding.github.io/Afro-Pessimism-Afro-Futurism/","Which intrigues you most?");
             labeltwo.position(10, 3.4*windowHeight);
             inputtwo = createInput();
             inputtwo.position(10, 3.4*windowHeight + 30);
@@ -510,7 +504,7 @@ function setup() {
 
         // group three
         {
-            labelthree = createP("Which intrigues you most?");
+            labelthree = createA("https://thewestwinding.github.io/Afro-Pessimism-Afro-Futurism/","Which intrigues you most?");
             labelthree.position(3*windowWidth/4, 4*windowHeight);
             inputthree = createInput();
             inputthree.position(3*windowWidth/4, 4*windowHeight + 30);
@@ -518,7 +512,7 @@ function setup() {
 
         // group four
         {
-            labelfour = createP("Which intrigues you most?");
+            labelfour = createA("https://thewestwinding.github.io/Afro-Pessimism-Afro-Futurism/","Which intrigues you most?");
             labelfour.position(10, 5.7*windowHeight);
             inputfour = createInput();
             inputfour.position(10, 5.7*windowHeight + 30);
@@ -526,7 +520,7 @@ function setup() {
 
         // confirm group
         {
-            labelconfirm = createP("Type 'Yes' without quotation marks to see your answer! Refresh to take the test again.");
+            labelconfirm = createA("https://thewestwinding.github.io/Afro-Pessimism-Afro-Futurism/","Type 'Yes' without quotation marks and press Enter to see your answer! Refresh to take the test again.");
             labelconfirm.position((windowWidth/2) - 500, 6.25*windowHeight + 30);
             inputconfirm = createInput();
             inputconfirm.position((windowWidth/2) - 500, 6.25*windowHeight + 60);
@@ -539,13 +533,19 @@ function draw() {
 }
 
 function keyPressed() {
-    responseone = inputone.value();
-    responsetwo = inputtwo.value();
-    responsethree = inputthree.value();
-    responsefour = inputfour.value();
-    responseconfirm = inputconfirm.value();
-
     if (keyCode === ENTER){
+        coalscore = 2.184;
+        litanyscore = 1.092;
+        bangelscore = 1.074;
+        springscore = 1.176;
+        totalscore = [0,0,0,0];
+
+        responseone = inputone.value();
+        responsetwo = inputtwo.value();
+        responsethree = inputthree.value();
+        responsefour = inputfour.value();
+        responseconfirm = inputconfirm.value();
+
         // response one
         if (responseone == "Love" || repsonseone == "love"){
             scoregroupone = [coalscore, litanyscore,    bangelscore,    springscore];
@@ -598,21 +598,21 @@ function keyPressed() {
             }
 
             // show result
-            if( totalscore[1] === Math.max.apply(Math, totalscore)){
-                image(coal,     3*windowWidth/4,    5*windowHeight, 500, 796);
+            if( totalscore[0] === Math.max.apply(Math, totalscore)){
                 image(coalimage, 0, 5*windowHeight,700,700);
+                image(coal,     9*windowWidth/16,    5*windowHeight, 500, 796);
+        
+            } else if( totalscore[1] === Math.max.apply(Math, totalscore)){
+                image(litanyimage, windowWidth/2 - 100, 5*windowHeight,700,700);
+                image(litany,0, 5*windowHeight, 500,923);
         
             } else if( totalscore[2] === Math.max.apply(Math, totalscore)){
-                image(litany,0, 5*windowHeight, 500,923);
-                image(litanyimage, windowWidth/2, 5*windowHeight,700,700);
+                image(bangelimage, 0, 5*windowHeight,600,600);
+                image(bangel,   windowWidth/2,      5*windowHeight,612,500);
         
             } else if( totalscore[3] === Math.max.apply(Math, totalscore)){
-                image(bangel,   windowWidth/2,      5*windowHeight,612,500);
-                image(bangelimage, 0, 5*windowHeight,600,600);
-        
-            } else if( totalscore[4] === Math.max.apply(Math, totalscore)){
-                image(spring,   windowWidth/2,      5*windowHeight,554,500);
                 image(springimage, 0, 5*windowHeight,600,600);
+                image(spring,   windowWidth/2,      5*windowHeight,554,500);
         
             }
         }
